@@ -1,0 +1,108 @@
+
+// slide text
+@keyframes slideX {
+    0% {
+        transform: translateX(150px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes moveRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes animate_p {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 0.6;
+    }
+}
+
+@keyframes header {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-3px);
+    }
+}
+
+// rotate
+@keyframes rotate_i {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+// fade
+
+@keyframes fade {
+    from {
+        opacity: .2
+    }
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+// skill progress bar
+
+@keyframes design {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 75%;
+    }
+}
+@keyframes web {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 90%;
+    }
+}
+@keyframes marketing {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 65%;
+    }
+}

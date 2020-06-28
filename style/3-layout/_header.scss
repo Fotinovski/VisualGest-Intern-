@@ -1,0 +1,187 @@
+.main__nav {
+    // z-index: 100; za da bide nad site sekcii
+    // color: boja koja kje gi odvoijuva headerot od ostanatiot del od kontentot ;
+    // position: fixed; //dokolku treba da bidie fixed nav barot
+    width: 100%;
+    .header__main-div {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 35px 0;
+        img {
+            width: 40px;
+            margin-left: 100px;
+            }
+        
+        .nav-links {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 50%;
+            margin-right: 100px;
+            li {
+             
+                    &:hover {
+                        animation: header 1s forwards; 
+                    }
+               
+            }
+        }
+    }
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+    div {
+        width: 25px;
+        height: 2px;
+        background-color: $black;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+}
+
+// ********************************************** Media Query **********************************************
+
+@include laptop {
+    .main__nav {
+        .header__main-div {
+            padding: 20px 0;
+            img {
+                margin-left: 50px;
+            }
+            .nav-links {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 65%;
+                margin-right: 50px;
+            }
+        }
+    }
+}
+// *****************************************************************
+@include tablet {
+    .main__nav {
+        position: fixed;
+        z-index: 1000;
+        background-color: rgba($color, 0.95);
+        height: 60px;
+        top: 0;
+        width: 100vw;
+        .header__main-div {
+
+            img {
+                display: block;
+                position: absolute;
+                left: 30px;
+                top: 15px;
+                margin-left: 0;
+            }
+            .nav-links {
+                width: 100vw;
+                li {
+                    a {
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+
+
+    }
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        top: 0;
+        z-index: 99;
+        left: 0;
+
+        background-color: $white;
+        background-image: linear-gradient(rgba($color, 0.95) 0%,rgba($white,0.95) 100%), url('../../img/logo/final2.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        transform: translateX(120%);
+        transition: transform 0.5s ease-in;
+
+
+        li {
+            opacity: 0;
+        }
+
+    }
+
+    .burger {
+        z-index: 100;
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 15px;
+    }
+}
+
+// *****************************************************************
+
+@include mobile {
+    .main__nav {
+        height: 40px;
+        .header__main-div {
+
+            .nav-links {
+                position: absolute;
+                right: 0;
+                height: 100vh;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                li {
+                    a {
+                        font-size: 14px;
+                    }
+                }
+            }
+            img {
+                top: 10px;
+                width: 30px;
+            }
+        }
+    }
+    .burger {
+        top: 5px;
+    }
+}
+
+// *****
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+@keyframes navLinkFade {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 5px);
+}
+.toggle .line2 {
+    opacity: 0;
+}
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -5px);
+}

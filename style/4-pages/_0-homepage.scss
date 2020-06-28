@@ -1,0 +1,1002 @@
+// section 1 **********************************************
+
+.first_section-background {
+    background-image: url('../img/cover.jpg');
+    background-position: bottom;
+    background-size: cover;
+    max-height: 1080px;
+}
+.first_section-text {
+    display: flex;
+    flex-direction: column;
+    padding-left: 50%;
+    padding-top: 150px;
+    h1 {
+        font-size: 38px;             
+    }
+
+    p {
+        padding: 30px 200px 30px 0;
+        opacity: 0.7;
+        line-height: 30px;
+        font-size: 18px;
+    }
+    .contactUs-btn {
+
+        margin: 0 auto 250px 0;
+    }
+}
+
+// section 2 **********************************************
+
+.aboutUs_section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 50px;
+    h1 {
+        padding-top: 50px;
+    }
+
+    p {
+        padding: 40px 345px;
+        line-height: 25px;
+    }
+    .signature {
+        margin: auto;
+        padding-bottom: 50px;
+    }
+}
+
+// section 3 **********************************************
+
+.skills_main-div {
+    display: flex;
+    justify-content: space-between;
+    height: 570px;
+    .skills_sub-div1 {
+        width: 50%;
+        padding: 165px 85px 160px 100px;
+
+
+        .skills_txt {
+            display: flex;
+            flex-direction: row;
+            padding: 40px 0 20px;
+            h4 {
+                font-size: 12px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            .skills-number {
+                margin-left: 40px;
+            }
+
+        }
+
+        .bar {
+            background-color: $color;
+            display: block;
+            height: 3px;
+
+            span {
+                height: 3px;
+                float: left;
+                background-color: $coralblue;
+            }
+            // ************
+            .design {
+                width: 75%;
+                animation: design 3s;
+            }           
+            // ************
+            .web {
+                width: 90%;
+                animation: web 3s;
+            }
+            // ************
+            .marketing {
+                width: 65%;
+                animation: marketing 3s;
+            }            
+        }
+
+    }
+    .skills_sub-div2 {
+        width: 50%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+// section 4 **********************************************
+
+.stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+    .stats-card {
+        display: flex;
+        flex-direction: row;
+
+        i {
+            color: $white;
+            font-size: 45px;              
+                    
+        }
+        .stats-info {
+            display: flex;
+            flex-direction: column;
+            margin-left: 25px;          
+
+            p {                
+                font-family: $Montserrat;
+                padding-top: 15px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                font-size: 12px;
+                font-weight: 500;
+                color: $white;
+            }
+            h5 {
+                color: $white;
+                font-size: 17px;
+                letter-spacing: 1.5px;
+            }
+        }
+    }
+}
+
+.rotate_i{
+    animation: rotate_i 1.5s 1.5s;
+}
+
+.moveRight{    
+    animation: moveRight 1.5s 1.5s;  
+}
+
+// section 5 **********************************************
+
+.work_main {
+    display: flex;
+    flex-wrap: wrap;
+
+    .img-container {
+        position: relative;
+        width: 25%;
+        .image {
+            opacity: 1;
+            display: block;
+            width: 100%;
+            &:hover {
+                opacity: 0.3;
+            }
+        }
+        .overlay {
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            padding-top: 38%;
+            background-color: rgba($black, 0.85);
+            text-align: center;
+            width: 100%;
+            height: 100%;
+            transition: opacity 0.25s;
+            cursor: pointer;
+        }
+        &:hover .overlay {
+            padding-top: 38%;
+            opacity: 1;
+            transition: opacity 0.75s;
+        }
+    }
+    .loadMore-btn {
+        display: flex;
+        padding: 50px 0 80px;
+        margin: 0 auto;
+        opacity: 0.6;
+        .popup {
+            cursor: pointer;
+
+            .popuptext {
+                visibility: hidden;
+                width: 250px;
+                background-color: $black;
+                color: $white;
+                text-align: center;
+                border-radius: 1px;
+                padding: 10px;
+                position: absolute;
+                transform: translate(-80%, -120%);
+                &:after {
+                    content: "";
+                    position: absolute;
+                    top: 100%;
+                    left: 50%;
+                    margin-left: -5px;
+                    border-width: 5px;
+                    border-style: solid;
+                    border-color: $black transparent transparent transparent;
+                }
+            }
+            .show {
+                visibility: visible;
+                animation: fadeIn 1s;
+            }
+            .showOut{
+                visibility: hidden;
+                animation: fadeOut 1s;
+            }
+        }
+    }
+}
+// section 6 **********************************************
+
+.card__main-div {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0;
+    .card_sub-div {
+        width: 25%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 25px;
+        h5 {
+            padding: 30px 0 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px; // vidi za ova ubo
+        }
+        p {
+            padding: 0 50px 15px;
+            opacity: 0.7;          
+            
+        }
+    }
+}
+
+.animate_p{
+    animation: animate_p 3s ;
+}
+// section 7 **********************************************
+
+// Slideshow container
+
+.slideshow-container {
+    .mySlides {
+        display: none;
+        .quote-box {
+            height: 460px;
+            text-align: center;
+            h5 {
+                color: $white;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            p {
+                font-family: $Montserrat;
+                color: $white;
+                font-size: 24px;
+                font-weight: 500;
+                padding: 170px 350px 50px;
+                line-height: 45px;
+            }
+        }
+    }
+    .fade {
+        animation: fade 1.5s;        
+    }
+}
+
+.dots {
+    text-align: center;
+    padding-bottom: 50px;
+    .dot {
+        cursor: pointer;
+        height: 7px;
+        width: 7px;
+        margin: 0 2px;
+        background-color: darken($white, 20%);
+        border-radius: 50%;
+        display: inline-block;
+        transition: background-color 0.6s ease;
+        &:hover {
+            background-color: $white;
+        }
+    }
+    .active {
+        height: 10px;
+        width: 10px;
+        background-color: $white;
+    }
+}
+
+// section 8 **********************************************
+
+.company-logos {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 130px;
+    align-items: center;
+    margin: 60px auto;
+}
+
+// section 9 **********************************************
+
+.form {
+
+    .form-container {
+        text-align: center;
+        h1 {
+            padding-top: 100px;
+        }
+        p {
+            padding: 40px 410px;
+            font-size: 18px;
+            line-height: 25px;
+        }
+    }
+    .form_input-container {
+        display: flex;
+        justify-content: center;
+        form {
+            width: 50%;
+        }
+        input,
+        textarea {
+            width: 100%;
+            border: none;
+            margin: 15px 0;
+            padding-left: 25px;
+            font-family: $NunitoSans;
+            font-size: 15px;
+        }
+        textarea {
+            padding-top: 10px;
+        }
+        input {
+            height: 50px;
+
+        }
+        .input-inline {
+            display: flex;
+            flex-direction: row;
+            .input-inline_left {
+                margin-right: 15px;
+            }
+            .input-inline_right {
+                margin-left: 15px;
+            }
+        }
+
+        .send_msn-container {
+            text-align: center;
+            .send_msn-btn {
+                padding: 20px 35px;
+                margin: 15px auto 100px;
+            }
+        }
+    }  
+}
+#topBtn{
+    position: fixed;
+    bottom: 40px;
+    right: 30px;
+    font-size: 40px;
+    color: lighten($black, 20%);
+    cursor: pointer;
+    display: none;
+  }
+
+// ********************************************** Media Query **********************************************
+
+@include laptop {
+    // section 1 **********************************************
+
+    .first_section-background {
+        background-position: left;
+        height: 100%;
+    }
+    .first_section-text {
+        padding-top: 90px;
+        padding-left: 40%;
+        text-align: center;
+        h1 {
+            font-size: 34px;
+        }
+
+        p {
+            padding: 20px 100px;
+            opacity: 0.7;
+            line-height: 20px;
+            font-size: 16px;
+
+        }
+        .contactUs-btn {
+
+            margin: 0 auto 100px;
+        }
+    }
+
+    // section 2 **********************************************
+
+    .aboutUs_section {
+        padding: 20px;
+        p {
+            padding: 40px 145px;
+            line-height: 25px;
+        }
+    }
+
+    // section 3 **********************************************
+
+    .skills_main-div {
+        height: 100%; // vidi ubavo za ova
+        .skills_sub-div1 {
+            padding: 80px 60px;
+            .skills_txt {
+                padding: 30px 0 15px;
+            }
+        }
+        .skills_sub-div2 {
+            width: 50%;
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    // section 4 **********************************************
+
+
+    .stats-wrapper {
+        padding: 50px 60px;
+        .stats-card {
+            i {
+                font-size: 35px;
+            }
+            .stats-info {
+                margin-left: 20px;
+
+                p {
+                    padding-top: 1px;
+                    letter-spacing: 0.5px;
+                }
+                h5 {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+
+    // section 5 **********************************************
+
+    .work_main {
+        .img-container {
+            .overlay {
+                padding-top: 35%;
+            }
+            &:hover .overlay {
+                padding-top: 35%;
+            }
+        }
+    }
+
+
+    // section 6 **********************************************
+
+    .card__main-div {
+        padding: 20px 0;
+        .card_sub-div {
+            padding: 0 10px;
+            h5 {
+                padding: 20px 0 10px;
+            }
+            p {
+                padding: 0 15px 25px;
+            }
+        }
+    }
+
+    // section 7 **********************************************
+
+    // Slideshow container
+
+    .slideshow-container {
+        .mySlides {
+            .quote-box {
+                height: 300px;
+                h5 {
+                    font-size: 12px;
+                }
+                p {
+                    padding: 70px 50px 50px;
+                    line-height: 35px;
+                }
+            }
+        }
+    }
+    .dots {
+        padding-bottom: 20px;
+    }
+
+    // section 8 **********************************************
+
+    .company-logos {
+        padding: 0 60px;
+        margin: 50px auto;
+    }
+
+    // section 9 **********************************************
+
+    .form {
+
+        .form-container {
+            h1 {
+                padding-top: 50px;
+            }
+            p {
+                padding: 30px 210px;
+                font-size: 16px;
+                line-height: 25px;
+            }
+        }
+        .form_input-container {
+            form {
+                width: 70%;
+            }
+            input,
+            textarea {
+                margin: 10px 0;
+                padding-left: 15px;
+                font-size: 14px;
+            }
+            textarea {
+                padding-top: 10px;
+            }
+            input {
+                height: 40px;
+            }
+            .input-inline {
+                .input-inline_left {
+                    margin-right: 10px;
+                }
+                .input-inline_right {
+                    margin-left: 10px;
+                }
+            }
+
+            .send_msn-container {
+                .send_msn-btn {
+                    padding: 15px 25px;
+                    margin: 10px auto 50px;
+                }
+            }
+        }
+    } 
+    #topBtn{
+        bottom: 20px;
+        right: 20px;
+        font-size: 30px;
+      }
+} 
+
+// *****************************************************************
+
+@include tablet {
+    // section 1 **********************************************
+
+    .first_section-background {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        height: 100%;
+    }
+    .first_section-text {
+        padding-top: 170px;
+        padding-left: 45%;
+        h1 {
+            font-size: 26px;
+        }
+
+        p {
+            padding: 20px 10px 30px 0;
+            opacity: 0.7;
+            line-height: 20px;
+            font-size: 14px;
+        }
+        .contactUs-btn {
+
+            margin: 0 auto 100px;
+        }
+    }
+
+    // section 2 **********************************************
+
+    .aboutUs_section {
+        padding: 30px;
+        h1 {
+            padding-top: 30px;
+            font-size: 26px;
+        }
+
+        p {
+            font-size: 14px;
+            padding: 20px 0;
+            line-height: 25px;
+        }
+        .signature {
+            margin: auto;
+            padding-bottom: 30px;
+        }
+    }
+
+    // section 3 **********************************************
+
+    .skills_main-div {
+        height: 100%;
+        .skills_sub-div1 {
+            width: 50%;
+            padding: 60px 30px;
+            h1 {
+                font-size: 26px;
+            }
+            .skills_txt {
+                padding: 20px 0 10px;
+                .skills-number {
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+
+    // section 4 **********************************************
+
+
+    .stats-wrapper {
+        padding: 50px 30px;
+        .stats-card {
+            i {
+                font-size: 30px;
+            }
+            .stats-info {
+                margin-left: 15px;
+
+                p {
+                    text-transform: uppercase;
+                    letter-spacing: 0;
+                    font-size: 10px;
+                }
+                h5 {
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+    // section 5 **********************************************
+
+    .work_main {
+        .img-container {
+            .overlay {
+                img {
+                    width: 25%;
+                }
+            }
+        }
+        .loadMore-btn {
+            padding: 30px 0 40px;
+        }
+    }
+
+    // section 6 **********************************************
+
+    .card__main-div {
+        padding: 20px 0;
+        .card_sub-div {
+            padding: 0 5px;
+            h5 {
+                padding: 10px 0 8px;
+                font-size: 10px;
+            }
+            p {
+                padding: 0 10px 25px;
+                font-size: 11px;
+            }
+        }
+    }
+
+    // section 7 **********************************************
+
+    // Slideshow container
+
+    .slideshow-container {
+        .mySlides {
+            .quote-box {
+                height: 270px;
+                h5 {
+                    font-size: 10px;
+                }
+                p {
+                    font-size: 20px;
+                    line-height: 30px;
+                }
+            }
+        }
+    }
+    .dots {
+        padding-bottom: 15px;
+
+    }
+    // section 8 **********************************************
+
+    .company-logos {
+        // flex-direction: column;
+        padding: 0 30px;
+        margin: 30px auto;
+        img {
+            width: 20%;
+        }
+    }
+
+    // section 9 **********************************************
+
+    .form {
+        .form-container {
+            h1 {
+                padding-top: 30px;
+                font-size: 26px;
+            }
+            p {
+                padding: 20px 100px;
+                font-size: 14px;
+                line-height: 20px;
+            }
+        }
+        .form_input-container {
+            form {
+                width: 90%;
+            }
+            input,
+            textarea {
+                margin: 5px 0;
+                padding-left: 15px;
+                font-size: 12px;
+            }
+            textarea {
+                padding-top: 10px;
+            }
+            input {
+                height: 30px;
+            }
+            .input-inline {
+                .input-inline_left {
+                    margin-right: 5px;
+                }
+                .input-inline_right {
+                    margin-left: 5px;
+                }
+            }
+
+            .send_msn-container {
+                .send_msn-btn {
+                    padding: 10px 20px;
+                    margin: 5px auto 30px;
+                }
+            }
+        }
+    }
+    #topBtn{
+       visibility: hidden;
+      }
+}
+
+// *****************************************************************
+
+@include mobile {
+    // section 1 **********************************************
+
+    .first_section-background {
+        background-size: cover;
+        background-position: 25% 50%;
+        height: 100vh;
+    }
+    .first_section-text {
+        padding-top: 140px;
+        padding-left: 0;
+        h1 {
+            font-size: 22px;
+        }
+
+        p {
+            padding: 20px;
+            opacity: 0.7;
+            line-height: 20px 10px;
+            font-size: 12px;
+        }
+        .contactUs-btn {
+
+            margin: 60px auto 0;
+        }
+    }
+
+    // section 2 **********************************************
+
+    .aboutUs_section {
+        padding: 30px 0;
+        // height: 45vh;
+        height: 100%;
+        h1 {
+            padding-top: 0;
+            font-size: 24px;
+        }
+
+        p {
+            font-size: 12px;
+            padding: 20px;
+            line-height: 20px;
+        }
+        .signature {
+            padding-bottom: 0;
+            width: 50vw;
+            margin: 0;
+        }
+    }
+
+    // section 3 **********************************************
+
+    .skills_main-div {
+        // height: 45vh;
+        height: 100%;
+        .skills_sub-div1 {
+            width: 100%;
+            padding: 30px 20px;
+            h1 {
+                font-size: 22px;
+                text-align: center;
+                padding-bottom: 20px;
+            }
+            .skills_txt {
+                padding: 20px 10px 10px;
+                justify-content: center;
+                h4 {
+                    font-size: 10px;
+                }
+            }
+        }
+        .skills_sub-div2 {
+            display: none;
+        }
+    }
+
+    // section 4 **********************************************
+
+
+    .stats-wrapper {
+        padding: 30px 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        .stats-card {
+            width: 50%;
+            padding: 10px;
+            i {
+                font-size: 20px;
+            }
+            .stats-info {
+                margin-left: 10px;
+
+                p {
+                    font-size: 10px;
+                }
+                h5 {
+                    font-size: 10px;
+                    letter-spacing: 0.5px;
+                }
+            }
+        }
+    }
+
+    // section 5 **********************************************
+    .work_main {
+        .img-container {
+            width: 50%;
+            .hide-img {
+                display: none;
+            }
+        }
+        .loadMore-btn {
+            .loadMore-btn {
+                padding: 20px 0 40px;
+            }
+        }
+    }
+
+
+    // section 6 **********************************************
+
+    .card__main-div {
+        padding: 20px 10px;
+        .card_sub-div {
+            padding: 0;
+            width: 50%;
+            h5 {
+                padding: 10px 0 8px;
+            }
+            p {
+                font-size: 12px;
+            }
+        }
+    }
+
+    // section 7 **********************************************
+
+    // Slideshow container
+
+    .slideshow-container {
+        .mySlides {
+            .quote-box {
+                height: 220px;
+                h5 {
+                    font-size: 10px;
+                }
+                p {
+                    font-size: 16px;
+                    line-height: 25px;
+                    padding: 50px 20px 30px;
+                }
+            }
+        }
+    }
+    .dots {
+        padding-bottom: 10px;
+
+    }
+    // section 8 **********************************************
+
+    .company-logos {
+        flex-direction: row;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0 20px;
+        margin: 20px auto;
+        justify-content: center;
+        img {
+            width: 33%;
+        }
+    }
+
+    // section 9 **********************************************
+
+    .form {
+        .form-container {
+            h1 {
+                padding-top: 20px;
+                font-size: 22px;
+            }
+            p {
+                padding: 10px 20px;
+                font-size: 12px;
+                line-height: 15px;
+            }
+        }
+        .form_input-container {
+            form {
+                width: 100%;
+                padding: 0 20px;
+            }
+            input,
+            textarea {
+                padding-left: 10px;
+            }
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.btn {
+    background-color: $coralblue;
+    color: $white;
+    font-size: 12px;
+    font-style: $Montserrat;
+    padding: 20px 45px;
+    &:hover{
+      background-color: $white;
+      box-shadow: 0 0 10px  $coralblue; 
+      animation: fadeIn 0.8s ease-out;
+    }
+    
+}
+
+button{
+  @extend  .btn;
+  @extend a ;
+  border: none;
+}
+
+@include laptop{
+  .btn {
+    padding: 15px 35px;   
+    }    
+}
+
+@include tablet{
+  .btn {
+    padding: 10px 25px;  
+    font-size: 10px; 
+    } 
+}
+
+@include mobile {
+  .btn{
+    padding: 10px 20px;
+    font-size: 9px;
+  }
+}

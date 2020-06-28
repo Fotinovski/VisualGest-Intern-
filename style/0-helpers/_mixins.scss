@@ -1,0 +1,46 @@
+// Mixin for all h elements
+@mixin h($fontSize) {
+    font-family: $Montserrat;
+    font-size: $fontSize;
+    color: $black;
+}
+
+//Mixin for paragraph
+@mixin p ($fontSize) {
+    font-family: $NunitoSans;
+    font-size: $fontSize;
+    color: lighten($black, 10%);
+    font-weight: 500;
+}
+
+//Mixin for anchor tags
+@mixin a ($fontSize) {
+    font-family: $Montserrat;
+    font-size: $fontSize;
+    color: $black;
+    font-weight: 1000;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    &:hover{
+        color: $coralblue;
+    }
+}
+
+//Mixin for media query
+
+@mixin laptop {
+    @media(max-width: 1024px) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media(max-width: 768px) {
+        @content;
+    }
+}
+@mixin mobile {
+    @media(max-width: 425px) {
+        @content;
+    }
+}
