@@ -159,6 +159,24 @@
   }
 }
 
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 @-webkit-keyframes design {
   0% {
     width: 0;
@@ -973,6 +991,12 @@ footer .footer_main-div .pd-left {
           animation: fadeIn 1s;
 }
 
+.work_main .loadMore-btn .popup .showOut {
+  visibility: hidden;
+  -webkit-animation: fadeOut 1s;
+          animation: fadeOut 1s;
+}
+
 .card__main-div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1010,8 +1034,8 @@ footer .footer_main-div .pd-left {
 }
 
 .animate_p {
-  -webkit-animation: animate_p 2s;
-          animation: animate_p 2s;
+  -webkit-animation: animate_p 3s;
+          animation: animate_p 3s;
 }
 
 .slideshow-container .mySlides {
