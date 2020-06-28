@@ -115,10 +115,62 @@ $(document).ready(function(){
     });
   
     $("#topBtn").click(function(){
-      $('html ,body').animate({scrollTop : 0},800);
+      $('html ,body').animate({scrollTop : 0},1000);
     });    
-
+    
 });
+
+// scroll to section ************
+
+//about
+$(document).ready(function (){
+  $("#aboutUs-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#aboutUs").offset().top
+      }, 2000);
+  });
+});
+//work
+$(document).ready(function (){
+  $("#work-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#work").offset().top
+      }, 2000);
+  });
+});
+//process
+$(document).ready(function (){
+  $("#process-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#process").offset().top
+      }, 2000);
+  });
+});
+//services
+$(document).ready(function (){
+  $("#services-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#services").offset().top
+      }, 2000);
+  });
+});
+//testimonial
+$(document).ready(function (){
+  $("#testimonial-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#testimonial").offset().top
+      }, 2000);
+  });
+});
+//contact
+$(document).ready(function (){
+  $("#contact-button").click(function (){
+      $('html, body').animate({
+          scrollTop: $("#contact").offset().top
+      }, 2000);
+  });
+});
+
 
 //animation when in view
 
