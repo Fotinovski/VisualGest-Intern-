@@ -178,8 +178,8 @@ let animationTriggered = false;
 let animationTriggered2 = false;
 
 $(document).scroll(function() {
-    var y = $(this).scrollTop();
-    var elementOffset = $('.skills_txt').position().top;
+    let y = $(this).scrollTop();
+    let elementOffset = $('.skills_txt').position().top;
     console.log(elementOffset)
     if ((y > elementOffset - 700) && (y < elementOffset) && !animationTriggered) {
       $("#design").addClass("design");
